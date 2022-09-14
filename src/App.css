@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+:root {
+    --main-blue: #1178cc;
+    --dark-blue: #0d5b9b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    background-color: var(--main-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.5rem;
+    margin-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.posts {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.post {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.post-title {
+    color: var(--main-blue);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.post-body {
+    font-weight: 300;
+    color: #727272;
+}
+
+.posts-pagianition {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.page-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--main-blue);
+    border-radius: 4px;
+    aspect-ratio: 1/1;
+    width: 2.25rem;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-page {
+    background-color: var(--dark-blue);
+}
+
+@media (max-width: 500px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .posts {
+        margin: 0 1rem;
+    }
+
+    .posts-pagianition {
+        width: 80%;
+    }
 }
