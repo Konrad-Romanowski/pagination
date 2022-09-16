@@ -4,12 +4,11 @@ import Posts from './components/Posts';
 
 export default function App() {
 
-    const [loadingPosts, setLoadingPosts] = React.useState(false);
+    const [loadingPosts, setLoadingPosts] = React.useState(true);
     const [posts, setPosts] = React.useState([]);
 
     React.useEffect(()=>{
         async function getPosts() {
-            setLoadingPosts(true);
             const response = await fetch("https://jsonplaceholder.typicode.com/posts");
             const data = await response.json();
             setPosts(data);
